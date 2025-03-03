@@ -35,10 +35,11 @@ namespace HelloGreetingApplication.Controllers
         /// </summary>
         /// <returns> Hello World!</returns>
         [HttpGet]
-        public IActionResult Get() {
+        public IActionResult Get(string? firstName = "", string? lastName = "")
+        {
 
             _logger.LogInformation("GET request received.");
-            string message = _greetingService.GetGreetingMessage();
+            string message = _greetingService.GetGreetingMessage(firstName, lastName);
             ResponseModel<string> responseModel = new ResponseModel<string>();
             responseModel.Success = true;
             responseModel.Message = " Hello to Greeting App API EndPoint";
@@ -47,19 +48,28 @@ namespace HelloGreetingApplication.Controllers
                 }
 
 
-
         [HttpPost]
         public IActionResult Post(RequestModel requestModel)
-        {
+        { 
+            if (string.IsNullOrEmpty(requestModel?.Key) || string.IsNullOrEmpty(requestModel?.Value))
+            {
+                return BadRequest(new ResponseModel<string>
+                {
+                    Success = false,
+                    Message = "Invalid request. Key and Value cannot be empty.",
+                    Data = null
+                });
+            }
 
             _logger.LogInformation("POST request received with Key: {Key}, Value: {Value}", requestModel.Key, requestModel.Value);
 
-            ResponseModel<string> responseModel = new ResponseModel<string>();
+            var responseModel = new ResponseModel<string>
+            {
+                Success = true,
+                Message = "Received successfully",
+                Data = $"Key: {requestModel.Key}, Value: {requestModel.Value}"
+            };
 
-
-             responseModel.Success = true;
-            responseModel.Message = "Received successfully";
-            responseModel.Data = $"key :{requestModel.Key},Value:{requestModel.Value}";
             return Ok(responseModel);
         }
 
