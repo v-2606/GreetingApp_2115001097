@@ -127,8 +127,6 @@
       "BussinessLayer/1.0.0": {
         "dependencies": {
           "ModelLayer": "1.0.0",
-          "NLog": "5.4.0",
-          "NLog.Extensions.Logging": "5.4.0",
           "RepositoryLayer": "1.0.0"
         },
         "runtime": {
@@ -139,10 +137,6 @@
         }
       },
       "ModelLayer/1.0.0": {
-        "dependencies": {
-          "NLog": "5.4.0",
-          "NLog.Extensions.Logging": "5.4.0"
-        },
         "runtime": {
           "ModelLayer.dll": {
             "assemblyVersion": "1.0.0",
@@ -152,9 +146,7 @@
       },
       "RepositoryLayer/1.0.0": {
         "dependencies": {
-          "ModelLayer": "1.0.0",
-          "NLog": "5.4.0",
-          "NLog.Extensions.Logging": "5.4.0"
+          "ModelLayer": "1.0.0"
         },
         "runtime": {
           "RepositoryLayer.dll": {

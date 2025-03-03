@@ -1,3 +1,5 @@
+using BussinessLayer.Interface;
+using BussinessLayer.Service;
 using Microsoft.AspNetCore.Mvc;
 using ModelLayer.Model;
 
@@ -15,14 +17,18 @@ namespace HelloGreetingApplication.Controllers
 
     {
         private readonly ILogger<HelloGreetingController> _logger;
+        private readonly IGreetingService _greetingService;
 
-    /// <summary>
-    /// Constructor to initialize logger.
-    /// </summary>
-    public HelloGreetingController(ILogger<HelloGreetingController> logger)
-    {
+       
+
+        /// <summary>
+        /// Constructor to initialize logger.
+        /// </summary>
+        public HelloGreetingController(ILogger<HelloGreetingController> logger, IGreetingService greetingService)
+        {
         _logger = logger;
-    }
+            _greetingService = greetingService;
+        }
     
         /// <summary>
         /// Get Method to get the greeting message
@@ -32,10 +38,11 @@ namespace HelloGreetingApplication.Controllers
         public IActionResult Get() {
 
             _logger.LogInformation("GET request received.");
+            string message = _greetingService.GetGreetingMessage();
             ResponseModel<string> responseModel = new ResponseModel<string>();
             responseModel.Success = true;
             responseModel.Message = " Hello to Greeting App API EndPoint";
-            responseModel.Data = "Hello World!";
+            responseModel.Data = message;
             return Ok(responseModel);
                 }
 

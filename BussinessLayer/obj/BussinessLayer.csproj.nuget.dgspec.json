@@ -56,16 +56,6 @@
       "frameworks": {
         "net6.0": {
           "targetAlias": "net6.0",
-          "dependencies": {
-            "NLog": {
-              "target": "Package",
-              "version": "[5.4.0, )"
-            },
-            "NLog.Extensions.Logging": {
-              "target": "Package",
-              "version": "[5.4.0, )"
-            }
-          },
           "imports": [
             "net461",
             "net462",
@@ -131,16 +121,6 @@
       "frameworks": {
         "net6.0": {
           "targetAlias": "net6.0",
-          "dependencies": {
-            "NLog": {
-              "target": "Package",
-              "version": "[5.4.0, )"
-            },
-            "NLog.Extensions.Logging": {
-              "target": "Package",
-              "version": "[5.4.0, )"
-            }
-          },
           "imports": [
             "net461",
             "net462",
@@ -210,16 +190,6 @@
       "frameworks": {
         "net6.0": {
           "targetAlias": "net6.0",
-          "dependencies": {
-            "NLog": {
-              "target": "Package",
-              "version": "[5.4.0, )"
-            },
-            "NLog.Extensions.Logging": {
-              "target": "Package",
-              "version": "[5.4.0, )"
-            }
-          },
           "imports": [
             "net461",
             "net462",

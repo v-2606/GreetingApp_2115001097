@@ -287,8 +287,6 @@
         "framework": ".NETCoreApp,Version=v6.0",
         "dependencies": {
           "ModelLayer": "1.0.0",
-          "NLog": "5.4.0",
-          "NLog.Extensions.Logging": "5.4.0",
           "RepositoryLayer": "1.0.0"
         },
         "compile": {
@@ -301,10 +299,6 @@
       "ModelLayer/1.0.0": {
         "type": "project",
         "framework": ".NETCoreApp,Version=v6.0",
-        "dependencies": {
-          "NLog": "5.4.0",
-          "NLog.Extensions.Logging": "5.4.0"
-        },
         "compile": {
           "bin/placeholder/ModelLayer.dll": {}
         },
@@ -316,9 +310,7 @@
         "type": "project",
         "framework": ".NETCoreApp,Version=v6.0",
         "dependencies": {
-          "ModelLayer": "1.0.0",
-          "NLog": "5.4.0",
-          "NLog.Extensions.Logging": "5.4.0"
+          "ModelLayer": "1.0.0"
         },
         "compile": {
           "bin/placeholder/RepositoryLayer.dll": {}

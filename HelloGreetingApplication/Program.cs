@@ -1,4 +1,6 @@
 
+using BussinessLayer.Interface;
+using BussinessLayer.Service;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
@@ -15,11 +17,13 @@ try
     // NLog ko use karne ke liye configure 
   
     builder.Logging.ClearProviders();
-    builder.Logging.AddConsole(); //  console logging is enabled
+    builder.Logging.AddConsole(); //  console logging enabled
 
     builder.Services.AddControllers();
     builder.Services.AddEndpointsApiExplorer();
     builder.Services.AddSwaggerGen();
+    builder.Services.AddScoped<IGreetingService, GreetingService>();
+
 
     var app = builder.Build();
 

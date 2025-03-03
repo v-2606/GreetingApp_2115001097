@@ -1,7 +1,6 @@
 C:\Users\varsh\OneDrive\Desktop\HelloGreetingApplication\ModelLayer\bin\Debug\net6.0\ModelLayer.deps.json
 C:\Users\varsh\OneDrive\Desktop\HelloGreetingApplication\ModelLayer\bin\Debug\net6.0\ModelLayer.dll
 C:\Users\varsh\OneDrive\Desktop\HelloGreetingApplication\ModelLayer\bin\Debug\net6.0\ModelLayer.pdb
-C:\Users\varsh\OneDrive\Desktop\HelloGreetingApplication\ModelLayer\obj\Debug\net6.0\ModelLayer.csproj.AssemblyReference.cache
 C:\Users\varsh\OneDrive\Desktop\HelloGreetingApplication\ModelLayer\obj\Debug\net6.0\ModelLayer.GeneratedMSBuildEditorConfig.editorconfig
 C:\Users\varsh\OneDrive\Desktop\HelloGreetingApplication\ModelLayer\obj\Debug\net6.0\ModelLayer.AssemblyInfoInputs.cache
 C:\Users\varsh\OneDrive\Desktop\HelloGreetingApplication\ModelLayer\obj\Debug\net6.0\ModelLayer.AssemblyInfo.cs
