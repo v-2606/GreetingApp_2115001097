@@ -18,6 +18,7 @@ namespace BussinessLayer.Interface
 
         List<GreetingEntity> GetAllGreeting();
 
+         bool EditGreeting(int id, EditGreeting editGreeting);
 
     }
 

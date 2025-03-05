@@ -9,7 +9,7 @@ using RepositoryLayer.Entity;
 
 namespace RepositoryLayer
 {
-    public class GreetingRL: IGreetingRL
+    public class GreetingRL : IGreetingRL
     {
         private readonly UserContext _context;
         private readonly ILogger<GreetingRL> _logger;
@@ -30,11 +30,23 @@ namespace RepositoryLayer
         {
             return _context.Greetings.FirstOrDefault(g => g.Id == id);
         }
-        public List<GreetingEntity> GetAllGreeting() {
+        public List<GreetingEntity> GetAllGreeting()
+        {
 
             _logger.LogInformation("Retrieving all greetings from the database.");
             return _context.Greetings.ToList();
-        
+
+        }
+
+        public bool EditGreeting(int id, string newMessage)
+        {
+            {
+                var greeting = _context.Greetings.FirstOrDefault(g => g.Id == id);
+                if (greeting == null) return false;
+                greeting.Message = newMessage;
+                _context.SaveChanges();
+                return true;
+            }
         }
     }
 }

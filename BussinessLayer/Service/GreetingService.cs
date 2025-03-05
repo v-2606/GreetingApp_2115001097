@@ -67,6 +67,13 @@ namespace BussinessLayer.Service
             _logger.LogInformation("Fetching All data ");
             return _greetingRL.GetAllGreeting();
         }
+
+        public bool EditGreeting(int id, EditGreeting editGreeting)
+        {
+            _logger.LogInformation($"Request received to update greeting with ID: {id}");
+           return  _greetingRL.EditGreeting(id, editGreeting.NewMessage);
+
+        }
     }
 }
 
