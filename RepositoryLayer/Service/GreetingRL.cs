@@ -30,6 +30,11 @@ namespace RepositoryLayer
         {
             return _context.Greetings.FirstOrDefault(g => g.Id == id);
         }
+        public List<GreetingEntity> GetAllGreeting() {
 
+            _logger.LogInformation("Retrieving all greetings from the database.");
+            return _context.Greetings.ToList();
+        
+        }
     }
 }

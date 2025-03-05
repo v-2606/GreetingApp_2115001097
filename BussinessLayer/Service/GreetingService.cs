@@ -62,7 +62,11 @@ namespace BussinessLayer.Service
             return _greetingRL.GetGreetingById(id);
         }
 
-      
+        public List<GreetingEntity>GetAllGreeting()
+        {
+            _logger.LogInformation("Fetching All data ");
+            return _greetingRL.GetAllGreeting();
+        }
     }
 }
 

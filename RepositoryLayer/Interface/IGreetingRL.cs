@@ -8,5 +8,7 @@ namespace RepositoryLayer
     {
         void SaveGreeting(GreetingEntity greeting);
         public GreetingEntity? GetGreetingById(int id);
+
+        public List<GreetingEntity> GetAllGreeting();
     }
 }
