@@ -155,8 +155,33 @@ namespace HelloGreetingApplication.Controllers
                 });
 
             }
-        
 
+        [HttpPut("Update/{id}")]
+        public IActionResult updateGreeting(int id, [FromBody] EditGreeting editGreeting )
+        {
+            _logger.LogInformation($"PUT request received for id:{id}");
+            bool isUpdate=_greetingService.EditGreeting(id, editGreeting);
+            if (!isUpdate)
+            { 
+              return NotFound( new ResponseModel<string>
+              {
+                  Success=false,
+                  Message="Id not Found",
+                  Data=null
+
+              });
+
+            }
+
+            return Ok(new ResponseModel<string>
+            {
+
+                Success = true,
+                Message = "Greeting Updated Successfully",
+                Data = editGreeting.NewMessage
+            });
+
+        }
             [HttpPut]
         public IActionResult Put(RequestModel requestModel)
         {

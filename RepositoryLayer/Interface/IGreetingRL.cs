@@ -10,5 +10,8 @@ namespace RepositoryLayer
         public GreetingEntity? GetGreetingById(int id);
 
         public List<GreetingEntity> GetAllGreeting();
+
+       
+        bool EditGreeting(int id, string newMessage);
     }
 }
