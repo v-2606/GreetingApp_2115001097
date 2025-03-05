@@ -20,6 +20,8 @@ namespace BussinessLayer.Interface
 
          bool EditGreeting(int id, EditGreeting editGreeting);
 
+        bool deleteGreeting(int id);
+
     }
 
 

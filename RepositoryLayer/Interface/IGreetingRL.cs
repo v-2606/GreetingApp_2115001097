@@ -13,5 +13,7 @@ namespace RepositoryLayer
 
        
         bool EditGreeting(int id, string newMessage);
+
+        bool deleteGreeting(int id);
     }
 }

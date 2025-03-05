@@ -74,6 +74,13 @@ namespace BussinessLayer.Service
            return  _greetingRL.EditGreeting(id, editGreeting.NewMessage);
 
         }
+
+        public bool deleteGreeting(int id) {
+
+            _logger.LogInformation($"Request received to DELETE greeting with ID: {id}");
+            return _greetingRL.deleteGreeting(id);
+
+        }
     }
 }
 

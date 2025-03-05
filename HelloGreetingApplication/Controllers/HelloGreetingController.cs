@@ -182,6 +182,34 @@ namespace HelloGreetingApplication.Controllers
             });
 
         }
+
+
+        [HttpDelete("delete/{id}")]
+
+        public IActionResult DeleteGreeting(int id) {
+            _logger.LogInformation($"DELETE request received for id:{id}");
+            bool isDelete = _greetingService.deleteGreeting(id);
+
+            if (!isDelete)
+            {
+                return NotFound(new ResponseModel<string>
+                {
+
+                    Success = false,
+                    Message = "ID not Found",
+                    Data = null
+                });
+            }
+
+            return Ok(new ResponseModel<string> 
+            {
+                Success=true,
+                Message="Successfully Deleted",
+                Data=$"Deleted id :{id}"
+            
+            });
+
+        }
             [HttpPut]
         public IActionResult Put(RequestModel requestModel)
         {
