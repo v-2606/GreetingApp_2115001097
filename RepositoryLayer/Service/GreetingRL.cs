@@ -41,12 +41,26 @@ namespace RepositoryLayer
         public bool EditGreeting(int id, string newMessage)
         {
             {
+
                 var greeting = _context.Greetings.FirstOrDefault(g => g.Id == id);
                 if (greeting == null) return false;
                 greeting.Message = newMessage;
                 _context.SaveChanges();
                 return true;
             }
+        }
+
+        public bool deleteGreeting(int id)
+        {
+
+            _logger.LogInformation($"DELETING request for greeting from the database of id:{id}");
+            var greeting = _context.Greetings.FirstOrDefault(g => g.Id == id);
+
+            if (greeting == null) return false;
+
+            _context.Greetings.Remove(greeting);
+            _context.SaveChanges();
+            return true;
         }
     }
 }
