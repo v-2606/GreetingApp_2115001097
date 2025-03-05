@@ -26,5 +26,10 @@ namespace RepositoryLayer
             _context.SaveChanges();
             _logger.LogInformation("Greeting saved successfully: {Message}", greeting.Message);
         }
+        public GreetingEntity? GetGreetingById(int id)
+        {
+            return _context.Greetings.FirstOrDefault(g => g.Id == id);
+        }
+
     }
 }

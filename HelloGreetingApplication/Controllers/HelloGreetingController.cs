@@ -107,7 +107,35 @@ namespace HelloGreetingApplication.Controllers
         }
 
 
-        [HttpPut]
+        [HttpGet("getGreetingById/{id}")]
+        public IActionResult GetGreetingById(int id)
+        {
+            _logger.LogInformation($"Fetching greeting with ID: {id}");
+
+            var greeting = _greetingService.GetGreetingById(id);
+
+            if (greeting == null)
+            {
+                return NotFound(new ResponseModel<string>
+                {
+                    Success = false,
+                    Message = "Greeting not found",
+                    Data = null
+                });
+            }
+
+            return Ok(new ResponseModel<GreetingEntity>
+            {
+                Success = true,
+                Message = "Greeting fetched successfully",
+                Data = greeting
+            });
+        }
+       
+        
+        
+
+            [HttpPut]
         public IActionResult Put(RequestModel requestModel)
         {
 
