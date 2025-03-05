@@ -1,7 +1,11 @@
+﻿using BussinessLayer;
 using BussinessLayer.Interface;
 using BussinessLayer.Service;
 using Microsoft.AspNetCore.Mvc;
+using Microsoft.EntityFrameworkCore;
 using ModelLayer.Model;
+using RepositoryLayer.Context;
+using RepositoryLayer.Entity;
 
 namespace HelloGreetingApplication.Controllers
 {
@@ -18,22 +22,35 @@ namespace HelloGreetingApplication.Controllers
     {
         private readonly ILogger<HelloGreetingController> _logger;
         private readonly IGreetingService _greetingService;
+        private readonly UserContext _context;
 
-       
+
 
         /// <summary>
         /// Constructor to initialize logger.
         /// </summary>
-        public HelloGreetingController(ILogger<HelloGreetingController> logger, IGreetingService greetingService)
+        public HelloGreetingController(ILogger<HelloGreetingController> logger, IGreetingService greetingService, UserContext context)
         {
         _logger = logger;
             _greetingService = greetingService;
+            _context = context ?? throw new ArgumentNullException(nameof(context));
         }
-    
+
         /// <summary>
         /// Get Method to get the greeting message
         /// </summary>
         /// <returns> Hello World!</returns>
+        /// 
+
+        [HttpGet("getGreet")]
+        public IActionResult GetGreetings()
+        {
+            var greetings = _context.Set<GreetingEntity>().ToList(); 
+
+            return Ok(new { Success = true, Data = greetings });
+        }
+
+
         [HttpGet]
         public IActionResult Get(string? firstName = "", string? lastName = "")
         {
@@ -45,12 +62,12 @@ namespace HelloGreetingApplication.Controllers
             responseModel.Message = " Hello to Greeting App API EndPoint";
             responseModel.Data = message;
             return Ok(responseModel);
-                }
+        }
 
 
         [HttpPost]
         public IActionResult Post(RequestModel requestModel)
-        { 
+        {
             if (string.IsNullOrEmpty(requestModel?.Key) || string.IsNullOrEmpty(requestModel?.Value))
             {
                 return BadRequest(new ResponseModel<string>
@@ -73,6 +90,21 @@ namespace HelloGreetingApplication.Controllers
             return Ok(responseModel);
         }
 
+        [HttpPost("Save")]
+        public IActionResult SaveGreet([FromBody] GreetingEntity greeting)
+        {
+            if (string.IsNullOrWhiteSpace(greeting.Message))
+            {
+                _logger.LogWarning("Empty greeting message received.");
+                return BadRequest("Message cannot be empty.");
+            }
+             greeting.CreatedAt = DateTime.Now;
+
+            _greetingService.SaveGreeting(greeting.Message);
+            _logger.LogInformation("Greeting saved via API: {Message}",greeting.Message);
+
+            return Ok(new { Message = "Greeting saved successfully!" });
+        }
 
 
         [HttpPut]

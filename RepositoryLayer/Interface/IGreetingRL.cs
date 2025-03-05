@@ -1,12 +1,11 @@
-﻿using System;
+﻿using ModelLayer.Model;
+using RepositoryLayer.Entity;
 using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
-namespace RepositoryLayer.Interface
+namespace RepositoryLayer
 {
     public interface IGreetingRL
     {
+        void SaveGreeting(GreetingEntity greeting);
     }
 }
