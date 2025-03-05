@@ -1,5 +1,10 @@
 .vs
+<<<<<<< HEAD
 
 bin/
 
 obj/
+=======
+obj/
+bin/
+>>>>>>> UC6

@@ -15,10 +15,14 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
 <<<<<<< HEAD
+<<<<<<< HEAD
 [assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+ba70d6a63e8f525b4c303f89b004b31970b2ecda")]
 =======
 [assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+1eff7450312c96546bb65428d9db2279b4f611ee")]
 >>>>>>> UC5
+=======
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+d5e05e2e8619580b91f83f60b77f1448458ad4c3")]
+>>>>>>> UC6
 [assembly: System.Reflection.AssemblyProductAttribute("ModelLayer")]
 [assembly: System.Reflection.AssemblyTitleAttribute("ModelLayer")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

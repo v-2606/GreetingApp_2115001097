@@ -132,7 +132,29 @@ namespace HelloGreetingApplication.Controllers
             });
         }
        
-        
+        [HttpGet("getAll")]
+        public IActionResult GetAllGreetings()
+        {
+            _logger.LogInformation("Fetching all greetings from the repository.");
+            var greeting = _greetingService.GetAllGreeting();
+
+            if (greeting == null)
+            {
+                return NotFound(new ResponseModel<string>
+                {
+                    Success = false,
+                    Message = "Greeting not found",
+                    Data = null
+                });
+            }
+                return Ok(new ResponseModel<List<GreetingEntity>> // for single object  (ResponseModel<GreetingEntity>) for Multiple List (ResponseModel<List<GreetingEntity>>)
+                {
+                    Success = true,
+                    Message = "Greeting fetched successfully",
+                    Data = greeting
+                });
+
+            }
         
 
             [HttpPut]
