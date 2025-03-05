@@ -83,5 +83,31 @@
       }
     ],
     "ReturnTypes": []
+  },
+  {
+    "ContainingType": "HelloGreetingApplication.Controllers.HelloGreetingController",
+    "Method": "GetGreetings",
+    "RelativePath": "HelloGreeting/getGreet",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "HelloGreetingApplication.Controllers.HelloGreetingController",
+    "Method": "SaveGreet",
+    "RelativePath": "HelloGreeting/Save",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "greeting",
+        "Type": "RepositoryLayer.Entity.GreetingEntity",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
   }
 ]

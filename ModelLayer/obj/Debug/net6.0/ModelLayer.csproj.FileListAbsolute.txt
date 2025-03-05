@@ -9,3 +9,15 @@ C:\Users\varsh\OneDrive\Desktop\HelloGreetingApplication\ModelLayer\obj\Debug\ne
 C:\Users\varsh\OneDrive\Desktop\HelloGreetingApplication\ModelLayer\obj\Debug\net6.0\refint\ModelLayer.dll
 C:\Users\varsh\OneDrive\Desktop\HelloGreetingApplication\ModelLayer\obj\Debug\net6.0\ModelLayer.pdb
 C:\Users\varsh\OneDrive\Desktop\HelloGreetingApplication\ModelLayer\obj\Debug\net6.0\ref\ModelLayer.dll
+C:\CGProject\GreetingApp_2115001097\ModelLayer\bin\Debug\net6.0\ModelLayer.deps.json
+C:\CGProject\GreetingApp_2115001097\ModelLayer\bin\Debug\net6.0\ModelLayer.dll
+C:\CGProject\GreetingApp_2115001097\ModelLayer\bin\Debug\net6.0\ModelLayer.pdb
+C:\CGProject\GreetingApp_2115001097\ModelLayer\obj\Debug\net6.0\ModelLayer.GeneratedMSBuildEditorConfig.editorconfig
+C:\CGProject\GreetingApp_2115001097\ModelLayer\obj\Debug\net6.0\ModelLayer.AssemblyInfoInputs.cache
+C:\CGProject\GreetingApp_2115001097\ModelLayer\obj\Debug\net6.0\ModelLayer.AssemblyInfo.cs
+C:\CGProject\GreetingApp_2115001097\ModelLayer\obj\Debug\net6.0\ModelLayer.csproj.CoreCompileInputs.cache
+C:\CGProject\GreetingApp_2115001097\ModelLayer\obj\Debug\net6.0\ModelLayer.sourcelink.json
+C:\CGProject\GreetingApp_2115001097\ModelLayer\obj\Debug\net6.0\ModelLayer.dll
+C:\CGProject\GreetingApp_2115001097\ModelLayer\obj\Debug\net6.0\refint\ModelLayer.dll
+C:\CGProject\GreetingApp_2115001097\ModelLayer\obj\Debug\net6.0\ModelLayer.pdb
+C:\CGProject\GreetingApp_2115001097\ModelLayer\obj\Debug\net6.0\ref\ModelLayer.dll
