@@ -14,6 +14,8 @@ using NLog;
 using RepositoryLayer;
 using RepositoryLayer.Context;
 using RepositoryLayer.Helper;
+using RepositoryLayer.Service;
+using StackExchange.Redis;
 
 
 var logger = LogManager.Setup().LoadConfigurationFromFile("nlog.config").GetCurrentClassLogger();
@@ -55,6 +57,11 @@ try
     });
 
     builder.Services.AddScoped<GlobalExceptionFilter>(); // Ensure DI registration
+
+
+    var redisConnectionString = builder.Configuration.GetSection("Redis:ConnectionString").Value;
+    builder.Services.AddSingleton<IConnectionMultiplexer>(ConnectionMultiplexer.Connect(redisConnectionString));
+    builder.Services.AddSingleton<RedisCacheService>();
 
 
 
