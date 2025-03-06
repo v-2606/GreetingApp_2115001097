@@ -138,6 +138,16 @@
   },
   {
     "ContainingType": "HelloGreetingApplication.Controllers.HelloGreetingController",
+    "Method": "GetToken",
+    "RelativePath": "HelloGreeting/getToken",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "HelloGreetingApplication.Controllers.HelloGreetingController",
     "Method": "SaveGreet",
     "RelativePath": "HelloGreeting/Save",
     "HttpMethod": "POST",
@@ -168,6 +178,22 @@
       {
         "Name": "editGreeting",
         "Type": "RepositoryLayer.Entity.EditGreeting",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "HelloGreetingApplication.Controllers.HelloGreetingController",
+    "Method": "ValidateToken",
+    "RelativePath": "HelloGreeting/validateToken",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "tokenRequest",
+        "Type": "ModelLayer.Model.TokenRequestcs",
         "IsRequired": true
       }
     ],

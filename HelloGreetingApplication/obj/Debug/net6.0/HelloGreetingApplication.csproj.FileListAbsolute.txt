@@ -133,3 +133,17 @@ C:\CGProject\GreetingApp_2115001097\HelloGreetingApplication\obj\Debug\net6.0\re
 C:\CGProject\GreetingApp_2115001097\HelloGreetingApplication\obj\Debug\net6.0\HelloGreetingApplication.pdb
 C:\CGProject\GreetingApp_2115001097\HelloGreetingApplication\obj\Debug\net6.0\HelloGreetingApplication.genruntimeconfig.cache
 C:\CGProject\GreetingApp_2115001097\HelloGreetingApplication\obj\Debug\net6.0\ref\HelloGreetingApplication.dll
+C:\CGProject\GreetingApp_2115001097\HelloGreetingApplication\bin\Debug\net6.0\Microsoft.AspNetCore.Authentication.JwtBearer.dll
+C:\CGProject\GreetingApp_2115001097\HelloGreetingApplication\bin\Debug\net6.0\GlobalExceptionHandler.dll
+C:\CGProject\GreetingApp_2115001097\HelloGreetingApplication\bin\Debug\net6.0\Microsoft.DotNet.PlatformAbstractions.dll
+C:\CGProject\GreetingApp_2115001097\HelloGreetingApplication\bin\Debug\net6.0\Microsoft.Extensions.DependencyInjection.Abstractions.dll
+C:\CGProject\GreetingApp_2115001097\HelloGreetingApplication\bin\Debug\net6.0\Microsoft.Extensions.DependencyModel.dll
+C:\CGProject\GreetingApp_2115001097\HelloGreetingApplication\bin\Debug\net6.0\Microsoft.Extensions.Diagnostics.Abstractions.dll
+C:\CGProject\GreetingApp_2115001097\HelloGreetingApplication\bin\Debug\net6.0\Microsoft.Extensions.FileProviders.Abstractions.dll
+C:\CGProject\GreetingApp_2115001097\HelloGreetingApplication\bin\Debug\net6.0\Microsoft.Extensions.Hosting.Abstractions.dll
+C:\CGProject\GreetingApp_2115001097\HelloGreetingApplication\bin\Debug\net6.0\Microsoft.Extensions.ObjectPool.dll
+C:\CGProject\GreetingApp_2115001097\HelloGreetingApplication\bin\Debug\net6.0\Newtonsoft.Json.dll
+C:\CGProject\GreetingApp_2115001097\HelloGreetingApplication\bin\Debug\net6.0\System.Text.Encodings.Web.dll
+C:\CGProject\GreetingApp_2115001097\HelloGreetingApplication\bin\Debug\net6.0\runtimes\browser\lib\net6.0\System.Text.Encodings.Web.dll
+C:\CGProject\GreetingApp_2115001097\HelloGreetingApplication\bin\Debug\net6.0\Middleware.dll
+C:\CGProject\GreetingApp_2115001097\HelloGreetingApplication\bin\Debug\net6.0\Middleware.pdb
