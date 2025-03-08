@@ -5,6 +5,7 @@ using System.ComponentModel.DataAnnotations;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using Microsoft.EntityFrameworkCore.Metadata.Internal;
 
 namespace RepositoryLayer.Entity
 {
@@ -17,5 +18,11 @@ namespace RepositoryLayer.Entity
         public string Message { get; set; }
 
         public DateTime CreatedAt { get; set; } = DateTime.Now; // Default value
+
+        [ForeignKey("Users")]
+        public int UserId { get; set; }
+
+        
+        public UsersEntity Users { get; set; }
     }
 }

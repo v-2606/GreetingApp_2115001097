@@ -1,4 +1,4 @@
-﻿using System.IdentityModel.Tokens.Jwt;
+﻿//using System.IdentityModel.Tokens.Jwt;
 using BussinessLayer;
 using BussinessLayer.Interface;
 using BussinessLayer.Service;
@@ -26,18 +26,17 @@ namespace HelloGreetingApplication.Controllers
         private readonly ILogger<HelloGreetingController> _logger;
         private readonly IGreetingService _greetingService;
         private readonly UserContext _context;
-        private readonly JwtHelper _jwtHelper;
+      //  private readonly JwtHelper _jwtHelper;
 
 
         /// <summary>
         /// Constructor to initialize logger.
         /// </summary>
-        public HelloGreetingController(ILogger<HelloGreetingController> logger, IGreetingService greetingService, UserContext context, JwtHelper jwtHelper)
-        {
+        public HelloGreetingController(ILogger<HelloGreetingController> logger, IGreetingService greetingService, UserContext context) { 
             _logger = logger;
             _greetingService = greetingService;
             _context = context ?? throw new ArgumentNullException(nameof(context));
-            _jwtHelper = jwtHelper;
+           // _jwtHelper = jwtHelper;
         }
 
         /// <summary>
@@ -66,52 +65,7 @@ namespace HelloGreetingApplication.Controllers
 
             }
         }
-        [HttpPost("getToken")]
-        public IActionResult GetToken()
-        {
-            _logger.LogInformation("Generating JWT token.");
-            try
-            {
-
-                string token = _jwtHelper.GenerateToken(1, "Varsha", "varsha@example.com", "Pass@123"); // Example data
-                _logger.LogInformation("JWT token generated successfully.");
-                return Ok(new { Token = token });
-            }
-            catch (Exception ex)
-            {
-                _logger.LogError(ex, "Error while generating JWT token.");
-                var errorResponse = ExceptionHandler.CreateErrorResponse(ex, _logger);
-                return StatusCode(500, errorResponse);
-
-
-            }
-
-        }
-        [HttpGet("validateToken")]
-        public IActionResult ValidateToken([FromBody] TokenRequestcs tokenRequest)
-        {
-            _logger.LogInformation("Validating JWT token.");
-            try
-            {
-                var claims = _jwtHelper.ValidateToken(tokenRequest.Token);
-                if (claims == null)
-                {
-                    _logger.LogWarning("Invalid token received.");
-                    return Unauthorized("Invalid token");
-                }
-
-                return Ok(new { Message = "Token is valid", Claims = claims.Claims.Select(c => new { c.Type, c.Value }) });
-            }
-
-            catch (Exception ex)
-            {
-                _logger.LogError(ex, "Error while validating token.");
-                var errorResponse = ExceptionHandler.CreateErrorResponse(ex, _logger);
-                return StatusCode(500, errorResponse);
-
-
-            }
-        }
+      
 
         [HttpGet]
         public IActionResult Get(string? firstName = "", string? lastName = "")
