@@ -3,11 +3,10 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
-using BussinessLayer.Interface;
 
-namespace BussinessLayer.Service
+namespace ModelLayer.DTO
 {
-public  class GreetingBL:IGreetingBL
+    internal class ResetPasswordDTO
     {
     }
 }

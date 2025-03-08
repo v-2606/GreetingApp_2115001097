@@ -2,18 +2,20 @@
 using System.Text;
 using BussinessLayer.Interface;
 using BussinessLayer.Service;
-using Microsoft.AspNetCore.Authentication.JwtBearer;
+//using Microsoft.AspNetCore.Authentication.JwtBearer;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.Data.SqlClient;
 using Microsoft.EntityFrameworkCore;
-using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
-using Microsoft.IdentityModel.Tokens;
+//using Microsoft.IdentityModel.Tokens;
 using Middleware;
 using NLog;
 using RepositoryLayer;
 using RepositoryLayer.Context;
 using RepositoryLayer.Helper;
+
+//using RepositoryLayer.Helper;
+using RepositoryLayer.Interface;
 using RepositoryLayer.Service;
 using StackExchange.Redis;
 
@@ -26,20 +28,20 @@ try
     var builder = WebApplication.CreateBuilder(args);
 
     // JWT Authentication
-    builder.Services.AddAuthentication(JwtBearerDefaults.AuthenticationScheme)
-        .AddJwtBearer(options =>
-        {
-            options.TokenValidationParameters = new TokenValidationParameters
-            {
-                ValidateIssuer = true,
-                ValidateAudience = true,
-                ValidateLifetime = true,
-                ValidateIssuerSigningKey = true,
-                ValidIssuer = builder.Configuration["Jwt:Issuer"],
-                ValidAudience = builder.Configuration["Jwt:Audience"],
-                IssuerSigningKey = new SymmetricSecurityKey(Encoding.UTF8.GetBytes(builder.Configuration["Jwt:Key"]))
-            };
-        });
+    //builder.Services.AddAuthentication(JwtBearerDefaults.AuthenticationScheme)
+    //    .AddJwtBearer(options =>
+    //    {
+    //        options.TokenValidationParameters = new TokenValidationParameters
+    //        {
+    //            ValidateIssuer = true,
+    //            ValidateAudience = true,
+    //            ValidateLifetime = true,
+    //            ValidateIssuerSigningKey = true,
+    //            ValidIssuer = builder.Configuration["Jwt:Issuer"],
+    //            ValidAudience = builder.Configuration["Jwt:Audience"],
+    //            IssuerSigningKey = new SymmetricSecurityKey(Encoding.UTF8.GetBytes(builder.Configuration["Jwt:Key"]))
+    //        };
+    //    });
 
     // NLog ko use karne ke liye configure 
 
@@ -49,8 +51,10 @@ try
     builder.Services.AddControllers();
     builder.Services.AddScoped<IGreetingRL, GreetingRL>();  // ( var app = builder.Build(); ) Missing Registration Added
     builder.Services.AddScoped<IGreetingService, GreetingService>();
-    builder.Services.AddScoped<JwtHelper>();
-
+    builder.Services.AddScoped<IUserBL, UserBL>();
+    builder.Services.AddScoped<IUserRL, UserRL>();
+    //builder.Services.AddScoped<JwtHelper>();
+    builder.Services.AddScoped<PasswordHashing>();
     builder.Services.AddControllers(options =>
     {
         options.Filters.Add<GlobalExceptionFilter>(); // Register Global Exception Filter
@@ -74,19 +78,22 @@ try
     builder.Services.AddEndpointsApiExplorer();
     builder.Services.AddSwaggerGen();
 
+    
 
-   
-     var app = builder.Build(); 
-      
+    var app = builder.Build();
+    app.UseRouting();
 
     //Swagger Enable
 
     app.UseSwagger();
     app.UseSwaggerUI();
 
-    app.UseAuthentication();
-    app.UseAuthorization();
-    app.MapControllers();
+   // app.UseAuthentication();
+    //app.UseAuthorization();
+    app.UseEndpoints(endpoints =>
+    {
+        endpoints.MapControllers(); //  Controllers ko register kar raha hai(UserController)
+    });
 
     app.Run();
 }

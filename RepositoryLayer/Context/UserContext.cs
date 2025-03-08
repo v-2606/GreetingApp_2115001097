@@ -15,6 +15,8 @@ namespace RepositoryLayer.Context
         { 
         }
     public virtual DbSet<GreetingEntity> Greetings { get; set; }
+        public virtual DbSet<UsersEntity> Users { get; set; }
+
 
     }
 }

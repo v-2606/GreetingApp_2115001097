@@ -4,9 +4,11 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace BussinessLayer.Interface
+namespace ModelLayer.DTO
 {
-    internal interface IGreetingBL
+    public class ForgetPasswordDTO
     {
+        public string Email { get; set; }
     }
+
 }
