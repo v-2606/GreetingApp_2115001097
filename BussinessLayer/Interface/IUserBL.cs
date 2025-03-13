@@ -4,6 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using ModelLayer.DTO;
+using RepositoryLayer.Entity;
 
 namespace BussinessLayer.Interface
 {
@@ -11,6 +12,14 @@ namespace BussinessLayer.Interface
     {
         bool Register(RegisterDTO model);
         
-        bool Login(LoginDTO model);
+        string Login(LoginDTO model);
+
+        bool ForgotPassword(string email);
+        bool ResetPassword(string token, string newPassword);
+        UsersEntity GetUserByEmail(string email); 
+        void SaveResetToken(int userId, string resetToken);
+        bool UpdatePassword(int userId, byte[] newPasswordHash);
+
+        UsersEntity? ValidateResetToken(string token);
     }
 }

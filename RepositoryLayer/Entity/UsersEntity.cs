@@ -17,7 +17,10 @@ namespace RepositoryLayer.Entity
             public string Email { get; set; } = string.Empty;
             public byte[] PasswordHash { get; set; }
 
+        public string? JwtToken { get; set; }
 
+        public string? ResetToken { get; set; }  
+        public DateTime? ResetTokenExpiry { get; set; }
         // Relationship: One User -> Many Greetings
         public ICollection<GreetingEntity> Greetings { get; set; } = new List<GreetingEntity>();
         }

@@ -1,4 +1,4 @@
-﻿//using System.IdentityModel.Tokens.Jwt;
+﻿
 using BussinessLayer;
 using BussinessLayer.Interface;
 using BussinessLayer.Service;
@@ -26,7 +26,7 @@ namespace HelloGreetingApplication.Controllers
         private readonly ILogger<HelloGreetingController> _logger;
         private readonly IGreetingService _greetingService;
         private readonly UserContext _context;
-      //  private readonly JwtHelper _jwtHelper;
+      
 
 
         /// <summary>
@@ -36,7 +36,7 @@ namespace HelloGreetingApplication.Controllers
             _logger = logger;
             _greetingService = greetingService;
             _context = context ?? throw new ArgumentNullException(nameof(context));
-           // _jwtHelper = jwtHelper;
+          
         }
 
         /// <summary>

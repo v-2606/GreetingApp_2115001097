@@ -1,131 +1,49 @@
-2025-03-07 10:56:14.0691 [Info] Application Starting... 
-2025-03-07 11:11:11.4893 [Info] Application Starting... 
-2025-03-07 11:11:13.8474 [Error] Application failed to start! System.InvalidOperationException: EndpointRoutingMiddleware matches endpoints setup by EndpointMiddleware and so must be added to the request execution pipeline before EndpointMiddleware. Please add EndpointRoutingMiddleware by calling 'IApplicationBuilder.UseRouting' inside the call to 'Configure(...)' in the application startup code.
-   at Microsoft.AspNetCore.Builder.EndpointRoutingApplicationBuilderExtensions.VerifyEndpointRoutingMiddlewareIsRegistered(IApplicationBuilder app, IEndpointRouteBuilder& endpointRouteBuilder)
-   at Microsoft.AspNetCore.Builder.EndpointRoutingApplicationBuilderExtensions.UseEndpoints(IApplicationBuilder builder, Action`1 configure)
-   at Program.<Main>$(String[] args) in C:\CGProject\GreetingApp_2115001097\HelloGreetingApplication\Program.cs:line 89
-2025-03-07 11:12:56.8163 [Info] Application Starting... 
-2025-03-07 11:25:29.2240 [Info] Application Starting... 
-2025-03-07 11:30:46.7022 [Info] Application Starting... 
-2025-03-07 11:30:47.2309 [Error] Application failed to start! Microsoft.Extensions.Hosting.HostFactoryResolver+HostingListener+StopTheHostException: Exception of type 'Microsoft.Extensions.Hosting.HostFactoryResolver+HostingListener+StopTheHostException' was thrown.
+2025-03-08 17:29:49.9640 [Info] Application Starting... 
+2025-03-08 18:21:08.5801 [Info] Application Starting... 
+2025-03-08 19:03:25.8681 [Info] Application Starting... 
+2025-03-08 19:20:36.1470 [Info] Application Starting... 
+2025-03-08 19:20:36.7452 [Error] Application failed to start! Microsoft.Extensions.Hosting.HostFactoryResolver+HostingListener+StopTheHostException: Exception of type 'Microsoft.Extensions.Hosting.HostFactoryResolver+HostingListener+StopTheHostException' was thrown.
    at Microsoft.Extensions.Hosting.HostFactoryResolver.HostingListener.OnNext(KeyValuePair`2 value)
    at System.Diagnostics.DiagnosticListener.Write(String name, Object value)
    at Microsoft.Extensions.Hosting.HostBuilder.Build()
    at Microsoft.AspNetCore.Builder.WebApplicationBuilder.Build()
-   at Program.<Main>$(String[] args) in C:\CGProject\GreetingApp_2115001097\HelloGreetingApplication\Program.cs:line 79
-2025-03-07 11:31:08.1890 [Info] Application Starting... 
-2025-03-07 11:31:08.6052 [Error] Application failed to start! Microsoft.Extensions.Hosting.HostFactoryResolver+HostingListener+StopTheHostException: Exception of type 'Microsoft.Extensions.Hosting.HostFactoryResolver+HostingListener+StopTheHostException' was thrown.
+   at Program.<Main>$(String[] args) in C:\CGProject\GreetingApp_2115001097\HelloGreetingApplication\Program.cs:line 82
+2025-03-08 19:20:47.8458 [Info] Application Starting... 
+2025-03-08 19:20:48.2129 [Error] Application failed to start! Microsoft.Extensions.Hosting.HostFactoryResolver+HostingListener+StopTheHostException: Exception of type 'Microsoft.Extensions.Hosting.HostFactoryResolver+HostingListener+StopTheHostException' was thrown.
    at Microsoft.Extensions.Hosting.HostFactoryResolver.HostingListener.OnNext(KeyValuePair`2 value)
    at System.Diagnostics.DiagnosticListener.Write(String name, Object value)
    at Microsoft.Extensions.Hosting.HostBuilder.Build()
    at Microsoft.AspNetCore.Builder.WebApplicationBuilder.Build()
-   at Program.<Main>$(String[] args) in C:\CGProject\GreetingApp_2115001097\HelloGreetingApplication\Program.cs:line 79
-2025-03-07 11:42:32.9400 [Info] Application Starting... 
-2025-03-07 11:42:33.6153 [Error] Application failed to start! Microsoft.Extensions.Hosting.HostFactoryResolver+HostingListener+StopTheHostException: Exception of type 'Microsoft.Extensions.Hosting.HostFactoryResolver+HostingListener+StopTheHostException' was thrown.
+   at Program.<Main>$(String[] args) in C:\CGProject\GreetingApp_2115001097\HelloGreetingApplication\Program.cs:line 82
+2025-03-08 19:22:08.5601 [Info] Application Starting... 
+2025-03-08 19:22:08.9293 [Error] Application failed to start! Microsoft.Extensions.Hosting.HostFactoryResolver+HostingListener+StopTheHostException: Exception of type 'Microsoft.Extensions.Hosting.HostFactoryResolver+HostingListener+StopTheHostException' was thrown.
    at Microsoft.Extensions.Hosting.HostFactoryResolver.HostingListener.OnNext(KeyValuePair`2 value)
    at System.Diagnostics.DiagnosticListener.Write(String name, Object value)
    at Microsoft.Extensions.Hosting.HostBuilder.Build()
    at Microsoft.AspNetCore.Builder.WebApplicationBuilder.Build()
-   at Program.<Main>$(String[] args) in C:\CGProject\GreetingApp_2115001097\HelloGreetingApplication\Program.cs:line 79
-2025-03-07 12:04:42.1661 [Info] Application Starting... 
-2025-03-07 12:04:42.9443 [Error] Application failed to start! Microsoft.Extensions.Hosting.HostFactoryResolver+HostingListener+StopTheHostException: Exception of type 'Microsoft.Extensions.Hosting.HostFactoryResolver+HostingListener+StopTheHostException' was thrown.
+   at Program.<Main>$(String[] args) in C:\CGProject\GreetingApp_2115001097\HelloGreetingApplication\Program.cs:line 82
+2025-03-08 19:22:24.1331 [Info] Application Starting... 
+2025-03-08 19:22:24.5118 [Error] Application failed to start! Microsoft.Extensions.Hosting.HostFactoryResolver+HostingListener+StopTheHostException: Exception of type 'Microsoft.Extensions.Hosting.HostFactoryResolver+HostingListener+StopTheHostException' was thrown.
    at Microsoft.Extensions.Hosting.HostFactoryResolver.HostingListener.OnNext(KeyValuePair`2 value)
    at System.Diagnostics.DiagnosticListener.Write(String name, Object value)
    at Microsoft.Extensions.Hosting.HostBuilder.Build()
    at Microsoft.AspNetCore.Builder.WebApplicationBuilder.Build()
-   at Program.<Main>$(String[] args) in C:\CGProject\GreetingApp_2115001097\HelloGreetingApplication\Program.cs:line 79
-2025-03-07 12:11:12.6124 [Info] Application Starting... 
-2025-03-07 12:11:13.4059 [Error] Application failed to start! Microsoft.Extensions.Hosting.HostFactoryResolver+HostingListener+StopTheHostException: Exception of type 'Microsoft.Extensions.Hosting.HostFactoryResolver+HostingListener+StopTheHostException' was thrown.
+   at Program.<Main>$(String[] args) in C:\CGProject\GreetingApp_2115001097\HelloGreetingApplication\Program.cs:line 82
+2025-03-08 19:28:42.7275 [Info] Application Starting... 
+2025-03-08 19:28:43.2155 [Error] Application failed to start! Microsoft.Extensions.Hosting.HostFactoryResolver+HostingListener+StopTheHostException: Exception of type 'Microsoft.Extensions.Hosting.HostFactoryResolver+HostingListener+StopTheHostException' was thrown.
    at Microsoft.Extensions.Hosting.HostFactoryResolver.HostingListener.OnNext(KeyValuePair`2 value)
    at System.Diagnostics.DiagnosticListener.Write(String name, Object value)
    at Microsoft.Extensions.Hosting.HostBuilder.Build()
    at Microsoft.AspNetCore.Builder.WebApplicationBuilder.Build()
-   at Program.<Main>$(String[] args) in C:\CGProject\GreetingApp_2115001097\HelloGreetingApplication\Program.cs:line 79
-2025-03-07 12:11:23.4160 [Info] Application Starting... 
-2025-03-07 12:11:24.1092 [Error] Application failed to start! Microsoft.Extensions.Hosting.HostFactoryResolver+HostingListener+StopTheHostException: Exception of type 'Microsoft.Extensions.Hosting.HostFactoryResolver+HostingListener+StopTheHostException' was thrown.
+   at Program.<Main>$(String[] args) in C:\CGProject\GreetingApp_2115001097\HelloGreetingApplication\Program.cs:line 82
+2025-03-08 19:28:50.2751 [Info] Application Starting... 
+2025-03-08 19:28:50.6449 [Error] Application failed to start! Microsoft.Extensions.Hosting.HostFactoryResolver+HostingListener+StopTheHostException: Exception of type 'Microsoft.Extensions.Hosting.HostFactoryResolver+HostingListener+StopTheHostException' was thrown.
    at Microsoft.Extensions.Hosting.HostFactoryResolver.HostingListener.OnNext(KeyValuePair`2 value)
    at System.Diagnostics.DiagnosticListener.Write(String name, Object value)
    at Microsoft.Extensions.Hosting.HostBuilder.Build()
    at Microsoft.AspNetCore.Builder.WebApplicationBuilder.Build()
-   at Program.<Main>$(String[] args) in C:\CGProject\GreetingApp_2115001097\HelloGreetingApplication\Program.cs:line 79
-2025-03-07 12:13:22.6887 [Info] Application Starting... 
-2025-03-07 12:13:23.5205 [Error] Application failed to start! Microsoft.Extensions.Hosting.HostFactoryResolver+HostingListener+StopTheHostException: Exception of type 'Microsoft.Extensions.Hosting.HostFactoryResolver+HostingListener+StopTheHostException' was thrown.
-   at Microsoft.Extensions.Hosting.HostFactoryResolver.HostingListener.OnNext(KeyValuePair`2 value)
-   at System.Diagnostics.DiagnosticListener.Write(String name, Object value)
-   at Microsoft.Extensions.Hosting.HostBuilder.Build()
-   at Microsoft.AspNetCore.Builder.WebApplicationBuilder.Build()
-   at Program.<Main>$(String[] args) in C:\CGProject\GreetingApp_2115001097\HelloGreetingApplication\Program.cs:line 79
-2025-03-07 12:16:53.2602 [Info] Application Starting... 
-2025-03-07 12:16:53.9218 [Error] Application failed to start! Microsoft.Extensions.Hosting.HostFactoryResolver+HostingListener+StopTheHostException: Exception of type 'Microsoft.Extensions.Hosting.HostFactoryResolver+HostingListener+StopTheHostException' was thrown.
-   at Microsoft.Extensions.Hosting.HostFactoryResolver.HostingListener.OnNext(KeyValuePair`2 value)
-   at System.Diagnostics.DiagnosticListener.Write(String name, Object value)
-   at Microsoft.Extensions.Hosting.HostBuilder.Build()
-   at Microsoft.AspNetCore.Builder.WebApplicationBuilder.Build()
-   at Program.<Main>$(String[] args) in C:\CGProject\GreetingApp_2115001097\HelloGreetingApplication\Program.cs:line 79
-2025-03-07 12:22:30.8534 [Info] Application Starting... 
-2025-03-07 12:22:31.3250 [Error] Application failed to start! Microsoft.Extensions.Hosting.HostFactoryResolver+HostingListener+StopTheHostException: Exception of type 'Microsoft.Extensions.Hosting.HostFactoryResolver+HostingListener+StopTheHostException' was thrown.
-   at Microsoft.Extensions.Hosting.HostFactoryResolver.HostingListener.OnNext(KeyValuePair`2 value)
-   at System.Diagnostics.DiagnosticListener.Write(String name, Object value)
-   at Microsoft.Extensions.Hosting.HostBuilder.Build()
-   at Microsoft.AspNetCore.Builder.WebApplicationBuilder.Build()
-   at Program.<Main>$(String[] args) in C:\CGProject\GreetingApp_2115001097\HelloGreetingApplication\Program.cs:line 79
-2025-03-07 12:25:14.8542 [Info] Application Starting... 
-2025-03-07 12:25:15.4001 [Error] Application failed to start! Microsoft.Extensions.Hosting.HostFactoryResolver+HostingListener+StopTheHostException: Exception of type 'Microsoft.Extensions.Hosting.HostFactoryResolver+HostingListener+StopTheHostException' was thrown.
-   at Microsoft.Extensions.Hosting.HostFactoryResolver.HostingListener.OnNext(KeyValuePair`2 value)
-   at System.Diagnostics.DiagnosticListener.Write(String name, Object value)
-   at Microsoft.Extensions.Hosting.HostBuilder.Build()
-   at Microsoft.AspNetCore.Builder.WebApplicationBuilder.Build()
-   at Program.<Main>$(String[] args) in C:\CGProject\GreetingApp_2115001097\HelloGreetingApplication\Program.cs:line 79
-2025-03-07 12:25:36.5228 [Info] Application Starting... 
-2025-03-07 12:25:37.0344 [Error] Application failed to start! Microsoft.Extensions.Hosting.HostFactoryResolver+HostingListener+StopTheHostException: Exception of type 'Microsoft.Extensions.Hosting.HostFactoryResolver+HostingListener+StopTheHostException' was thrown.
-   at Microsoft.Extensions.Hosting.HostFactoryResolver.HostingListener.OnNext(KeyValuePair`2 value)
-   at System.Diagnostics.DiagnosticListener.Write(String name, Object value)
-   at Microsoft.Extensions.Hosting.HostBuilder.Build()
-   at Microsoft.AspNetCore.Builder.WebApplicationBuilder.Build()
-   at Program.<Main>$(String[] args) in C:\CGProject\GreetingApp_2115001097\HelloGreetingApplication\Program.cs:line 79
-2025-03-07 12:29:08.6680 [Info] Application Starting... 
-2025-03-07 12:29:09.2009 [Error] Application failed to start! Microsoft.Extensions.Hosting.HostFactoryResolver+HostingListener+StopTheHostException: Exception of type 'Microsoft.Extensions.Hosting.HostFactoryResolver+HostingListener+StopTheHostException' was thrown.
-   at Microsoft.Extensions.Hosting.HostFactoryResolver.HostingListener.OnNext(KeyValuePair`2 value)
-   at System.Diagnostics.DiagnosticListener.Write(String name, Object value)
-   at Microsoft.Extensions.Hosting.HostBuilder.Build()
-   at Microsoft.AspNetCore.Builder.WebApplicationBuilder.Build()
-   at Program.<Main>$(String[] args) in C:\CGProject\GreetingApp_2115001097\HelloGreetingApplication\Program.cs:line 79
-2025-03-07 12:35:58.6394 [Info] Application Starting... 
-2025-03-07 12:35:59.6175 [Error] Application failed to start! Microsoft.Extensions.Hosting.HostFactoryResolver+HostingListener+StopTheHostException: Exception of type 'Microsoft.Extensions.Hosting.HostFactoryResolver+HostingListener+StopTheHostException' was thrown.
-   at Microsoft.Extensions.Hosting.HostFactoryResolver.HostingListener.OnNext(KeyValuePair`2 value)
-   at System.Diagnostics.DiagnosticListener.Write(String name, Object value)
-   at Microsoft.Extensions.Hosting.HostBuilder.Build()
-   at Microsoft.AspNetCore.Builder.WebApplicationBuilder.Build()
-   at Program.<Main>$(String[] args) in C:\CGProject\GreetingApp_2115001097\HelloGreetingApplication\Program.cs:line 79
-2025-03-07 12:36:08.6150 [Info] Application Starting... 
-2025-03-07 12:36:09.1011 [Error] Application failed to start! Microsoft.Extensions.Hosting.HostFactoryResolver+HostingListener+StopTheHostException: Exception of type 'Microsoft.Extensions.Hosting.HostFactoryResolver+HostingListener+StopTheHostException' was thrown.
-   at Microsoft.Extensions.Hosting.HostFactoryResolver.HostingListener.OnNext(KeyValuePair`2 value)
-   at System.Diagnostics.DiagnosticListener.Write(String name, Object value)
-   at Microsoft.Extensions.Hosting.HostBuilder.Build()
-   at Microsoft.AspNetCore.Builder.WebApplicationBuilder.Build()
-   at Program.<Main>$(String[] args) in C:\CGProject\GreetingApp_2115001097\HelloGreetingApplication\Program.cs:line 79
-2025-03-07 12:37:35.9609 [Info] Application Starting... 
-2025-03-07 12:37:36.8367 [Error] Application failed to start! Microsoft.Extensions.Hosting.HostFactoryResolver+HostingListener+StopTheHostException: Exception of type 'Microsoft.Extensions.Hosting.HostFactoryResolver+HostingListener+StopTheHostException' was thrown.
-   at Microsoft.Extensions.Hosting.HostFactoryResolver.HostingListener.OnNext(KeyValuePair`2 value)
-   at System.Diagnostics.DiagnosticListener.Write(String name, Object value)
-   at Microsoft.Extensions.Hosting.HostBuilder.Build()
-   at Microsoft.AspNetCore.Builder.WebApplicationBuilder.Build()
-   at Program.<Main>$(String[] args) in C:\CGProject\GreetingApp_2115001097\HelloGreetingApplication\Program.cs:line 79
-2025-03-07 12:37:47.1784 [Info] Application Starting... 
-2025-03-07 12:37:47.8049 [Error] Application failed to start! Microsoft.Extensions.Hosting.HostFactoryResolver+HostingListener+StopTheHostException: Exception of type 'Microsoft.Extensions.Hosting.HostFactoryResolver+HostingListener+StopTheHostException' was thrown.
-   at Microsoft.Extensions.Hosting.HostFactoryResolver.HostingListener.OnNext(KeyValuePair`2 value)
-   at System.Diagnostics.DiagnosticListener.Write(String name, Object value)
-   at Microsoft.Extensions.Hosting.HostBuilder.Build()
-   at Microsoft.AspNetCore.Builder.WebApplicationBuilder.Build()
-   at Program.<Main>$(String[] args) in C:\CGProject\GreetingApp_2115001097\HelloGreetingApplication\Program.cs:line 79
-2025-03-07 12:40:34.8963 [Info] Application Starting... 
-2025-03-07 12:40:35.7839 [Error] Application failed to start! Microsoft.Extensions.Hosting.HostFactoryResolver+HostingListener+StopTheHostException: Exception of type 'Microsoft.Extensions.Hosting.HostFactoryResolver+HostingListener+StopTheHostException' was thrown.
-   at Microsoft.Extensions.Hosting.HostFactoryResolver.HostingListener.OnNext(KeyValuePair`2 value)
-   at System.Diagnostics.DiagnosticListener.Write(String name, Object value)
-   at Microsoft.Extensions.Hosting.HostBuilder.Build()
-   at Microsoft.AspNetCore.Builder.WebApplicationBuilder.Build()
-   at Program.<Main>$(String[] args) in C:\CGProject\GreetingApp_2115001097\HelloGreetingApplication\Program.cs:line 79
-2025-03-07 13:56:37.1276 [Info] Application Starting... 
-2025-03-07 15:04:20.6525 [Info] Application Starting... 
-2025-03-07 18:39:21.1073 [Info] Application Starting... 
-2025-03-07 19:03:20.7344 [Info] Application Starting... 
+   at Program.<Main>$(String[] args) in C:\CGProject\GreetingApp_2115001097\HelloGreetingApplication\Program.cs:line 82
+2025-03-08 19:29:57.5631 [Info] Application Starting... 
+2025-03-08 19:39:04.0870 [Info] Application Starting... 
+2025-03-08 23:15:13.2328 [Info] Application Starting... 
+2025-03-08 23:34:20.9706 [Info] Application Starting... 

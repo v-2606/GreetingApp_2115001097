@@ -2,19 +2,18 @@
 using System.Text;
 using BussinessLayer.Interface;
 using BussinessLayer.Service;
-//using Microsoft.AspNetCore.Authentication.JwtBearer;
+using Microsoft.AspNetCore.Authentication.JwtBearer;
+
 using Microsoft.AspNetCore.Builder;
 using Microsoft.Data.SqlClient;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Hosting;
-//using Microsoft.IdentityModel.Tokens;
+using Microsoft.IdentityModel.Tokens;
 using Middleware;
 using NLog;
 using RepositoryLayer;
 using RepositoryLayer.Context;
 using RepositoryLayer.Helper;
-
-//using RepositoryLayer.Helper;
 using RepositoryLayer.Interface;
 using RepositoryLayer.Service;
 using StackExchange.Redis;
@@ -27,21 +26,25 @@ try
 
     var builder = WebApplication.CreateBuilder(args);
 
-    // JWT Authentication
-    //builder.Services.AddAuthentication(JwtBearerDefaults.AuthenticationScheme)
-    //    .AddJwtBearer(options =>
-    //    {
-    //        options.TokenValidationParameters = new TokenValidationParameters
-    //        {
-    //            ValidateIssuer = true,
-    //            ValidateAudience = true,
-    //            ValidateLifetime = true,
-    //            ValidateIssuerSigningKey = true,
-    //            ValidIssuer = builder.Configuration["Jwt:Issuer"],
-    //            ValidAudience = builder.Configuration["Jwt:Audience"],
-    //            IssuerSigningKey = new SymmetricSecurityKey(Encoding.UTF8.GetBytes(builder.Configuration["Jwt:Key"]))
-    //        };
-    //    });
+    var jwtSettings = builder.Configuration.GetSection("Jwt");
+    var key = Encoding.UTF8.GetBytes(jwtSettings["Key"]);
+
+    builder.Services.AddAuthentication(JwtBearerDefaults.AuthenticationScheme)
+        .AddJwtBearer(options =>
+        {
+            options.TokenValidationParameters = new TokenValidationParameters
+            {
+                ValidateIssuer = true,
+                ValidateAudience = true,
+                ValidateLifetime = true,
+                ValidateIssuerSigningKey = true,
+                ValidIssuer = jwtSettings["Issuer"],
+                ValidAudience = jwtSettings["Audience"],
+                IssuerSigningKey = new SymmetricSecurityKey(key)
+            };
+        });
+
+    builder.Services.AddAuthorization();
 
     // NLog ko use karne ke liye configure 
 
@@ -53,7 +56,14 @@ try
     builder.Services.AddScoped<IGreetingService, GreetingService>();
     builder.Services.AddScoped<IUserBL, UserBL>();
     builder.Services.AddScoped<IUserRL, UserRL>();
-    //builder.Services.AddScoped<JwtHelper>();
+    builder.Services.AddScoped<IEmailService, EmailService>();
+   // builder.Services.AddScoped<EmailService>();
+
+
+
+
+
+    builder.Services.AddScoped<jwtHelper>();
     builder.Services.AddScoped<PasswordHashing>();
     builder.Services.AddControllers(options =>
     {
@@ -88,8 +98,8 @@ try
     app.UseSwagger();
     app.UseSwaggerUI();
 
-   // app.UseAuthentication();
-    //app.UseAuthorization();
+    app.UseAuthentication();
+    app.UseAuthorization();
     app.UseEndpoints(endpoints =>
     {
         endpoints.MapControllers(); //  Controllers ko register kar raha hai(UserController)

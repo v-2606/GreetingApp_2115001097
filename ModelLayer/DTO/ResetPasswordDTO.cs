@@ -6,7 +6,10 @@ using System.Threading.Tasks;
 
 namespace ModelLayer.DTO
 {
-    internal class ResetPasswordDTO
+    public class ResetPasswordDTO
     {
+       
+        public string NewPassword { get; set; }
+        public string ConfirmPassword { get; set; }
     }
 }

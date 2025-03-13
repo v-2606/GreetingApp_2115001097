@@ -12,5 +12,14 @@ namespace RepositoryLayer.Interface
 
         UsersEntity GetUserByEmail(string email);
         bool Register(UsersEntity user);
+
+
+        bool SaveToken(int userId, string token);
+        void SaveResetToken(int userId, string token);
+
+        bool ResetPassword(int userId, byte[] newPasswordHash);
+
+        bool UpdatePassword(int userId, byte[] newPasswordHash);
+        public UsersEntity? GetUserById(int userId);
     }
 }
